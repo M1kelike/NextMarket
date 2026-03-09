@@ -1,0 +1,96 @@
+@use '@/styles/variables' as *;
+
+.form {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: $spacing-xl;
+  background-color: $white;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-md;
+}
+
+.title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: $spacing-xl;
+  color: $text-primary;
+}
+
+.errorMessage {
+  padding: $spacing-md;
+  background-color: #fed7d7;
+  color: $error;
+  border-radius: $radius-md;
+  margin-bottom: $spacing-md;
+  font-size: 0.875rem;
+}
+
+.field {
+  margin-bottom: $spacing-lg;
+}
+
+.label {
+  display: block;
+  margin-bottom: $spacing-sm;
+  font-weight: 500;
+  color: $text-primary;
+  font-size: 0.875rem;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  border: 1px solid $border;
+  border-radius: $radius-md;
+  font-size: 1rem;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
+
+  &:focus {
+    outline: none;
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgb(49 130 206 / 10%);
+  }
+
+  &:disabled {
+    background-color: #f7fafc;
+    cursor: not-allowed;
+  }
+}
+
+.fieldError {
+  display: block;
+  margin-top: $spacing-xs;
+  color: $error;
+  font-size: 0.75rem;
+}
+
+.button {
+  width: 100%;
+  padding: $spacing-md;
+  background-color: $primary;
+  color: $white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background-color: $primary-hover;
+  }
+}
+
+.hint {
+  margin-top: $spacing-md;
+  text-align: center;
+  font-size: 0.75rem;
+  color: $text-secondary;
+}

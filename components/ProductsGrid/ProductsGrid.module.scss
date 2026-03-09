@@ -1,0 +1,22 @@
+@use '@/styles/variables' as *;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $spacing-lg;
+  padding: $spacing-lg 0;
+
+  @include mobile {
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: #{$mobile + 1}) and (max-width: #{$desktop}) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.empty {
+  text-align: center;
+  color: $text-secondary;
+  padding: $spacing-xl;
+}

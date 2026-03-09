@@ -1,0 +1,10 @@
+@use '@/styles/variables' as *;
+
+.error {
+  padding: $spacing-md;
+  background-color: #fed7d7;
+  color: $error;
+  border-radius: $radius-md;
+  text-align: center;
+  margin: $spacing-md 0;
+}

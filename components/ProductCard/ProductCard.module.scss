@@ -1,0 +1,74 @@
+@use '@/styles/variables' as *;
+
+.card {
+  background-color: $white;
+  border-radius: $radius-lg;
+  border: 1px solid $border;
+  box-shadow: $shadow-md;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: #f7fafc;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.content {
+  padding: $spacing-md;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: $text-primary;
+  margin-bottom: $spacing-sm;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.category {
+  font-size: 0.875rem;
+  color: $text-secondary;
+  text-transform: capitalize;
+  margin-bottom: $spacing-sm;
+}
+
+.price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: $primary;
+  margin-bottom: $spacing-md;
+}
+
+.button {
+  width: 100%;
+  padding: $spacing-sm $spacing-md;
+  background-color: $primary;
+  color: $white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}

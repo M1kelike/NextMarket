@@ -1,0 +1,75 @@
+@use '@/styles/variables' as *;
+
+.header {
+  background-color: $white;
+  box-shadow: $shadow-sm;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: $spacing-md $spacing-lg;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: $primary;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.userSection {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.userName {
+  color: $text-primary;
+  font-weight: 500;
+
+  @include mobile {
+    display: none;
+  }
+}
+
+.logoutBtn {
+  padding: $spacing-sm $spacing-md;
+  background-color: $primary;
+  color: $white;
+  border: none;
+  border-radius: $radius-md;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+.loginLink {
+  padding: $spacing-sm $spacing-md;
+  color: $primary;
+  font-weight: 500;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
